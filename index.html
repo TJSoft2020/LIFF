@@ -28,6 +28,7 @@
   <p id="universalLink1"><b>Universal Link:</b> </p>
   <p id="universalLink2"><b>Universal Link with Query params:</b> </p>
   <p><a href="liff/path/?param=9">Link to Path</a></p>
+
   <button id="btnMsg" onclick="sendMsg()">Send Message</button>
   <button id="btnShare" onclick="shareMsg()">Share Target Picker</button>
   <button onclick="openWindow()">Open Window</button>
@@ -41,7 +42,7 @@
     console.log("Hello World!")
   </script> -->
 
-  <script src="https://static.line-scdn.net/liff/edge/versions/2.1.13/sdk.js"></script> -->
+  <!-- <script src="https://static.line-scdn.net/liff/edge/versions/2.1.13/sdk.js"></script> -->
   <script>
     function createUniversalLink() {
     }
@@ -65,16 +66,6 @@
     }
 
     async function sendMsg() {
-	  if (liff.getcontext().type != "none") {
-      await liff.sendmessages([
-		  {
-		    "type": "sticker",
-  			"stickerID": 1,
-	  		"packageID": 1
-		  }
-		  ])
-      alert("Message Sent")
-	  }	  
     }
 
     function getContext() {
@@ -84,11 +75,11 @@
     }
 
     function getEnvironment() {
-	  
     }
 
     async function main() {
-      await liff.init({ liffId: "1654258483-L8N5YRYA" })
+      alert("LINE Developers x Skooldio")
+      await liff.init({ liffId: "YOUR-LIFF-ID" })
       // getEnvironment()
       // getUserProfile()
       // getContext()
